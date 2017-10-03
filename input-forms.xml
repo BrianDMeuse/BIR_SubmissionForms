@@ -279,7 +279,7 @@ it, please enter the types and the actual numbers or codes.</hint>
          <dc-schema>dc</dc-schema>
          <dc-element>description</dc-element>
          <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
+         <repeatable>true</repeatable>
          <label>Description</label>
          <input-type>textarea</input-type>
          <hint> Enter any other description or comments in this box. </hint>
@@ -515,6 +515,10 @@ it, please enter the types and the actual numbers or codes.</hint>
      <pair>
        <displayed-value>Stone</displayed-value>
        <stored-value>Stone</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Unknown</displayed-value>
+       <stored-value>Unknown</stored-value>
      </pair>
    </value-pairs>
    
