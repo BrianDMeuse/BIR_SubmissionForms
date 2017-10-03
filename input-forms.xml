@@ -15,6 +15,7 @@
 
  <form-map>
    <name-map collection-handle="default" form-name="traditional" />
+   <name-map collection-handle="10192/22503" form-name="clarc" />
  </form-map>
 
 
@@ -216,6 +217,78 @@ it, please enter the types and the actual numbers or codes.</hint>
        </field>
       </page>
     </form>
+ 
+   <form name="clarc">
+     <page number="1">
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>title</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Title</label>
+         <input-type>onebox</input-type>
+         <hint>Enter the main title of the item.</hint>
+         <required>You must enter a main title for this item.</required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>identifier</dc-element>
+         <dc-qualifier>other</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>CLARC Identifier</label>
+         <input-type>onebox</input-type>
+         <hint>Please enter the CLARC ID number</hint>
+         <required>REQUIRED: Please enter the CLARC ID number</required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>format</dc-element>
+         <dc-qualifier>extent</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Extent</label>
+         <input-type>onebox</input-type>
+         <hint>This is the field you would use for dimensions such as height or width.</hint>
+         <required>Please enter this information.</required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>format</dc-element>
+         <dc-qualifier>medium</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Medium</label>
+         <input-type value-pairs-name="clarc_medium">dropdown</input-type>
+         <hint>What the item is made out of (such as 'Bronze' or 'Stone'). Select from list. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key.</hint>
+         <required>Please enter this information.</required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>type</dc-element>
+         <repeatable>true</repeatable>
+         <label>Type</label>
+         <input-type value-pairs-name="clarc_type">dropdown</input-type>
+         <hint>What the item is (ex. 'Figurine'). Select from list. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key.</hint>
+         <required>Please enter this information.</required>
+       </field>
+     
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Description</label>
+         <input-type>textarea</input-type>
+         <hint> Enter any other description or comments in this box. </hint>
+         <required>Please enter a description here.</required>
+       </field>
+       
+     </page>
+   </form>
+ 
  </form-definitions>
 
 
@@ -400,7 +473,197 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value>other</stored-value>
      </pair>
    </value-pairs>
+   
+   <!-- 
+     BIR Specific 
+   -->
 
+   <!-- CLARC -->
+   <value-pairs value-pairs-name="clarc_medium" dc-term="format_medium">
+     <pair>
+       <displayed-value>Bronze</displayed-value>
+       <stored-value>Bronze</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ceramic</displayed-value>
+       <stored-value>Ceramic</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Copper</displayed-value>
+       <stored-value>Copper</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Glass</displayed-value>
+       <stored-value>Glass</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Gold</displayed-value>
+       <stored-value>Gold</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Iron</displayed-value>
+       <stored-value>Iron</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Ivory</displayed-value>
+       <stored-value>Ivory</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Metal</displayed-value>
+       <stored-value>Metal</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Stone</displayed-value>
+       <stored-value>Stone</stored-value>
+     </pair>
+   </value-pairs>
+   
+   <value-pairs value-pairs-name="clarc_type" dc-term="type">
+     <pair>
+       <displayed-value>Alabastron</displayed-value>
+       <stored-value>Alabastron</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Amphora</displayed-value>
+       <stored-value>Amphora</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Amphoriskos</displayed-value>
+       <stored-value>Amphoriskos</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Aryballos</displayed-value>
+       <stored-value>Aryballos</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Bead</displayed-value>
+       <stored-value>Bead</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Bowl</displayed-value>
+       <stored-value>Bowl</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Coin</displayed-value>
+       <stored-value>Coin</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Cup</displayed-value>
+       <stored-value>Cup</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Dish</displayed-value>
+       <stored-value>Dish</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Figurine</displayed-value>
+       <stored-value>Figurine</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Fixture</displayed-value>
+       <stored-value>Fixture</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Fragment</displayed-value>
+       <stored-value>Fragment</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Handle</displayed-value>
+       <stored-value>Handle</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Jar</displayed-value>
+       <stored-value>Jar</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Jarlet</displayed-value>
+       <stored-value>Jarlet</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Jewelry</displayed-value>
+       <stored-value>Jewelry</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Jug</displayed-value>
+       <stored-value>Jug</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Juglet</displayed-value>
+       <stored-value>Juglet</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Kylix</displayed-value>
+       <stored-value>Kylix</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Lamp</displayed-value>
+       <stored-value>Lamp</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Lekythos</displayed-value>
+       <stored-value>Lekythos</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mirror</displayed-value>
+       <stored-value>Mirror</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Miscellaneous</displayed-value>
+       <stored-value>Miscellaneous</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Oinokhoe</displayed-value>
+       <stored-value>Oinokhoe</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Pin</displayed-value>
+       <stored-value>Pin</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Pitcher</displayed-value>
+       <stored-value>Pitcher</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Pot</displayed-value>
+       <stored-value>Pot</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Relief</displayed-value>
+       <stored-value>Relief</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Seal</displayed-value>
+       <stored-value>Seal</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Skyphos</displayed-value>
+       <stored-value>Skyphos</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Tool</displayed-value>
+       <stored-value>Tool</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Unguentarium</displayed-value>
+       <stored-value>Unguentarium</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Vase</displayed-value>
+       <stored-value>Vase</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Vessel</displayed-value>
+       <stored-value>Vessel</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Vial</displayed-value>
+       <stored-value>Vial</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Weapon</displayed-value>
+       <stored-value>Weapon</stored-value>
+     </pair>
+   </value-pairs>
  </form-value-pairs>
 
 </input-forms>
